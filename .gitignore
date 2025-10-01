@@ -1,0 +1,19 @@
+Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+pip-selfcheck.json
+*.egg-info/
+dist/
+build/
+
+Environment variables
+.env
+
+IDE - VSCode
+.vscode/
