@@ -5,11 +5,10 @@ langchain==0.3.27
 langchain-community==0.3.30
 langchain-core==0.3.76
 langchain-huggingface==0.3.1
-langchain-pinecone
-langchain-pinecone
+langchain-pinecone==0.2.12
 datasets
+pinecone==7.3.0
 pinecone-client==3.2.2
-torch
 accelerate
 bitsandbytes
 python-dotenv
@@ -19,6 +18,5 @@ tiktoken
 sentence-transformers>=2.6.0
 transformers>=4.45.0
 tokenizers>=0.19.1
-sentence-transformers>=2.6.0
 langchain-cohere
 cohere

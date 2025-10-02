@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 
 from pinecone import Pinecone as PineconeClient
-from langchain_community.vectorstores import Pinecone as LangchainPinecone
+from langchain_pinecone import PineconeVectorStore
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
 from langchain_cohere import CohereRerank
@@ -49,8 +49,9 @@ def load_models():
     if PINECONE_INDEX_NAME not in pc.list_indexes().names():
         raise RuntimeError(f"인덱스 '{PINECONE_INDEX_NAME}'가 존재하지 않습니다.")
     
-    vectorstore = LangchainPinecone.from_existing_index(
-        index_name=PINECONE_INDEX_NAME,
+    index = pc.Index(PINECONE_INDEX_NAME)
+    vectorstore = PineconeVectorStore(  # LangchainPinecone → PineconeVectorStore
+        index=index,
         embedding=embedding_model,
         text_key='text'
     )
