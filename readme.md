@@ -54,8 +54,8 @@ KorQuAD 1.0 데이터셋을 기반으로 RAG(Retrieval-Augmented Generation) 시
 
 ```bash
 # 저장소 클론
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/pokqok/goormMission.git
+cd goormMission
 
 # 가상환경 생성
 python -m venv venv
