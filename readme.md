@@ -60,12 +60,24 @@ cd <repository-name>
 # 가상환경 생성
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
-# 패키지 설치
+### 2. PyTorch CUDA 설치 (필수)
+
+⚠️ **중요**: requirements.txt 설치 전에 PyTorch CUDA 버전을 먼저 설치해야 합니다.
+
+```bash
+# CUDA 12.6 버전 PyTorch 설치
+pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu126
+```
+
+### 3. 패키지 설치
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. 환경 변수 설정
+### 4. 환경 변수 설정
 
 `.env` 파일 생성:
 
@@ -76,7 +88,7 @@ HUGGING_FACE_TOKEN=your_huggingface_token
 COHERE_API_KEY=your_cohere_api_key
 ```
 
-### 3. 데이터 전처리 및 인덱싱
+### 5. 데이터 전처리 및 인덱싱
 
 ```bash
 python data_processing.py
@@ -87,7 +99,7 @@ python data_processing.py
 - BGE-M3 임베딩 생성 (1024차원)
 - Pinecone 인덱스에 저장
 
-### 4. 서버 실행
+### 6. 서버 실행
 
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000
@@ -255,7 +267,7 @@ repetition_penalty = 1.3
 - Few-shot 예시로 문서 기반 답변 유도
 - 외부 지식 사용 명시적 금지
 
-## ⚙️ 시스템 요구사항
+##  시스템 요구사항
 
 - **GPU**: CUDA 지원 필수
 - **메모리**: 
@@ -277,7 +289,6 @@ repetition_penalty = 1.3
 ##  라이선스
 
 본 프로젝트는 교육 목적으로 제작되었습니다.
-
 
 ---
 
