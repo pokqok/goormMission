@@ -207,6 +207,7 @@ You are an AI that answers based solely on the given documents.
 ### 주요 도전과제와 해결 과정
 
 #### 1. LLM 모델 선택의 어려움
+- 적은 시간 및 한국어 모델/ 적당한 크기/ 몇번의 검색으로 탐색
 
 **문제 1: EleutherAI/polyglot-ko-1.3b**
 - 답변이 짧을 때: 같은 내용을 반복 생성
