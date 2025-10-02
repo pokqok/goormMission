@@ -134,7 +134,7 @@ curl -X POST "http://localhost:8000/ask" \
 from datasets import load_dataset
 dataset = load_dataset("squad_kor_v1")
 
-# 청크 전략: 문단 단위 분할
+# 청크 전략: RecursiveCharacterTextSplitter 사용 (크기: 2000, 중첩: 400)
 # 임베딩: BGE-M3 (1024차원)
 # 벡터 저장: Pinecone 클라우드
 ```
@@ -224,7 +224,7 @@ You are an AI that answers based solely on the given documents.
 - ✅ 답변 길이 제어 개선 (반복/잘림 현상 해결)
 - ✅ 질의 범위 제한 메커니즘과의 조화
 
-## 🔧 주요 설정 파라미터
+##  주요 설정 파라미터
 
 ```python
 # 검색 설정

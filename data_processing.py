@@ -81,7 +81,7 @@ def preprocess_and_embed_data():
     print(f"  Context: {dataset[0]['context'][:100]}...")
     print(f"  Answers: {dataset[0]['answers']}\n")
 
-    # 3. context별로 그룹화 (중복 제거 - 핵심!)
+    # 3. context별로 그룹화 (중복 제거)
     print("데이터를 context별로 그룹화합니다...")
     context_groups = {}
     for item in dataset:
@@ -116,7 +116,7 @@ def preprocess_and_embed_data():
             'batch_size': 16
         }
     )
-    print("모델 로드 완료!")
+    print("모델 로드 완료")
 
     # 6. 문서 처리 및 Pinecone 업로드
     print("\n문서를 청크로 분할하고 임베딩을 생성합니다...")
