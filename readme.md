@@ -215,7 +215,7 @@ You are an AI that answers based solely on the given documents.
      ```json
      {
        "question": "귀신고래의 서식지를 알려줘",
-       "answers": "귀신토끼의 서식을 알려줌."  // 여전히 부정확
+       "answers": "귀신토끼의 서식을 알려줌."  
      }
      ```
 
@@ -225,8 +225,8 @@ You are an AI that answers based solely on the given documents.
    - 예시:
      ```json
      {
-       "question": "대한민국의 수도는 어디인가요?",
-       "answers": "대한민국은 수도가 서울입니다."  // 정확한 답변
+       "question": "귀신고래의 서식지를 알려줘",
+       "answers": "북서태평양"  
      }
      ```
 
